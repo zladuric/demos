@@ -3,7 +3,7 @@
 /**
  * Home page
  */
-angular.module('HomeView', [])
+angular.module('fkjs.views.home', [])
 
 .controller('HomeViewController', function($scope){
     $scope.pageTitle = 'Home';

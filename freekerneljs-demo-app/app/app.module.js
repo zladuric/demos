@@ -3,17 +3,20 @@ angular.module('FreeKernelJsDemoApp', [
     // the application:
     
     //angular modules
-    'ngRoute',
     'ngMaterial',
     'ngAnimate',
+    'ui.router',
+    
     //widgets
     'fkjs.widgets.navbar',
     'fkjs.widgets.header',
     'fkjs.widgets.notification',
     'fkjs.widgets.tile',
+    'fkjs.widgets.panel',
+    
     //views
-    'MainView',
-    'HomeView',
-    'SignupView',
-    'AboutView'
+    'fkjs.views.main',
+    'fkjs.views.home',
+    'fkjs.views.signup',
+    'fkjs.views.about'
 ]);

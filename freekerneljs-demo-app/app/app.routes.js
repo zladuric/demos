@@ -1,30 +1,29 @@
 angular.module('FreeKernelJsDemoApp')
 
-.config(['$routeProvider',
-    function($routeProvider){
-        var homePage = '/home';
-                
-        $routeProvider
-        
-        .when('/', {redirectTo: homePage})
-        .when(homePage, {
-            templateUrl: 'views/home/page.html',
-            module: 'HomeView',
-            controller: 'HomeViewController'
-        })
-        
-        .when('/signup', {
-            templateUrl: 'views/signup/page.html',
-            module: 'SignupView',
-            controller: 'SignupViewController'
-        })
-        
-        .when('/about', {
-            templateUrl: 'views/about/page.html',
-            module: 'AboutView',
-            controller: 'AboutViewController'
-        })
-          
-        .otherwise({ redirectTo: homePage });
-    }
-]);
+.config(function($stateProvider, $urlRouterProvider){
+             
+        // ~~~ Redirects and Otherwise
+        $urlRouterProvider
+            .otherwise( '/home' );
+
+    
+        // ~~~ State Configurations
+        $stateProvider
+            .state('home', {
+                url: '/home',
+                templateUrl: 'views/home/page.html',
+                controller: 'HomeViewController'
+            })
+
+            .state('signup', {
+                url: '/signup',
+                templateUrl: 'views/signup/page.html',
+                controller: 'SignupViewController'
+            })
+
+            .state('about', {
+                url: '/about',
+                templateUrl: 'views/about/page.html',
+                controller: 'AboutViewController'
+            });
+});

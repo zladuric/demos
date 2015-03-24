@@ -3,7 +3,7 @@
 /**
  * Responsible for managing main aspects of the application
  */
-angular.module('MainView', [])
+angular.module('fkjs.views.main', [])
 
 
 /*

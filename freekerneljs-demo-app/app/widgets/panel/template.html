@@ -1,15 +1,22 @@
-<div class="md-whiteframe-z1 {{cssPrefix}}-panel">
-
-    <div class="{{cssPrefix}}-panel-header">
-        <span class="{{cssPrefix}}-panel-title">Inbox</span>
-        <span class="{{cssPrefix}}-panel-controls">
-            <a href="javascript:void(0);" class="mdi mdi-settings"></a>
-        </span>
+<div class="md-whiteframe-z1 fkjs-panel">
+    
+    <!-- header -->
+    <div class="fkjs-panel-header" layout="row">
+        <div class="fkjs-panel-title">{{title}}</div>
+        <div flex></div>
+        <div>
+            <fkjs-notification ng-hide="hideSettingsTool"></fkjs-notification>
+            
+            <md-button aria-label="Toggle"
+                       class="mdi mdi-expand-less"
+                       ng-hide="hideCollapseTool"
+                       ng-click="togglePanel($event)">
+                <md-tooltip>Toggle</md-tooltip>
+            </md-button>
+            
+        </div>
     </div>
-
-    <div class="{{cssPrefix}}-panel-body">
-
-        <!-- TODO -->
-
-    </div>
+    
+    <!-- body -->
+    <div class="fkjs-panel-body" ng-transclude></div>
 </div>

@@ -1,0 +1,43 @@
+
+// inbox
+.inbox{
+    padding: 10px 0;
+    color: $color-grey-400;
+}
+.inbox .md-button{
+    text-transform: none;
+}
+.inbox-icon{
+    margin-right: 10px;
+}
+
+// notification
+.#{$app-css-prefix}-notification-dialog ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.#{$app-css-prefix}-notification-dialog li {
+    margin: 0;
+    padding: 12px;
+    border-top: $border-width $border-style $color-grey-300;
+}
+
+.#{$app-css-prefix}-notification-dialog li.last {
+    border-bottom: $border-width $border-style $color-grey-300;
+}
+
+.#{$app-css-prefix}-notification-dialog .notify-icon{
+    padding-right: 5px;
+    font-size: 1.3em;
+}
+
+.#{$app-css-prefix}-notification-dialog .notify-count{
+    background-color: $color-accent-500;
+    line-height: 20px;
+    height: 20px;
+    padding: .1em .65em .2em;
+    color: #fff;
+    @include border-radius($border-radius);
+}

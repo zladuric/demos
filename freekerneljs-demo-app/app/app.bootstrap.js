@@ -7,11 +7,14 @@ $script([
     'widgets/header/module.js',
     'widgets/notification/module.js',
     'widgets/tile/module.js',
+    'widgets/panel/module.js',
+    
     //views
     'views/main/controller.js',
     'views/home/controller.js',
     'views/signup/controller.js',
     'views/about/controller.js',
+    
     //app files
     'app.module.js'
 

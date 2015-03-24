@@ -9,26 +9,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" type="image/ico" href="assets/images/favicon.ico">
         
+        <!-- styling -->
         <link href="http://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic" rel="stylesheet">
-        
         <link rel="stylesheet" href="assets/bower_components/angular-material/angular-material.min.css">
         <link rel="stylesheet" href="assets/bower_components/material-design-iconic-font/css/material-design-iconic-font.min.css">
         <link rel="stylesheet" type="text/css" href="../dist/app.css" media="screen">
-<!--        <link rel="stylesheet" type="text/css" href="../dist/app.min.css" media="screen">-->
         
+        <!-- 3rd parties -->
+        <!-- jQuery must be included first! -->
+        <script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="assets/bower_components/scriptjs/dist/script.min.js"></script>
+        
+        <!-- Angular Modules -->
         <script src="assets/bower_components/angular/angular.js"></script>
-        <script src="assets/bower_components/angular-route/angular-route.js"></script>
         <script src="assets/bower_components/angular-aria/angular-aria.js"></script>
         <script src="assets/bower_components/angular-animate/angular-animate.js"></script>
         <script src="assets/bower_components/angular-material/angular-material.js"></script>
-        <script src="assets/bower_components/scriptjs/dist/script.min.js"></script>
+        <script src="assets/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+        
+        <!-- app -->
         <script src="app.bootstrap.js"></script>
     </head>
     
     <body layout="column" class="md-default-theme md-hue-1">
         <section class="{{cssPrefix}}-page-wrapper" layout="row" flex>
             <fkjs-navbar></fkjs-navbar>
-            <div class="page-animation" layout="column" flex ng-view></div>
+            <div class="page-animation" layout="column" flex ui-view></div>
         </section>
     </body>
 </html>

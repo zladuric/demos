@@ -3,7 +3,7 @@
 /**
  * Sign Up page
  */
-angular.module('SignupView', [])
+angular.module('fkjs.views.signup', [])
 
 .controller('SignupViewController', function($scope, $timeout, $q){
     $scope.pageTitle = 'Sign Up';

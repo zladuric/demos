@@ -15,45 +15,25 @@
         
         <!-- first panel -->
         <!-- ~~~~~~~~~~~ -->
-        <div class="md-whiteframe-z1 {{cssPrefix}}-panel" flex="25">
-
-            <div class="{{cssPrefix}}-panel-header" layout="row">
-                <div class="{{cssPrefix}}-panel-title">Inbox</div>
-                <div flex></div>
-                <div>
-                    <fkjs-notification></fkjs-notification>
-                </div>
-            </div>
-
-            <div class="{{cssPrefix}}-panel-body">
-                <md-list>
-                    <md-item ng-repeat="item in messages">
-                        <md-item-content class="inbox">
-                            <md-button ng-click="showSimpleToast()">
-                                <i class="inbox-icon mdi" ng-class="statusCheck(item.status)"></i>
-                                {{item.title}} | {{item.date}}
-                            </md-button>
-                        </md-item-content>
-                        <md-divider></md-divider>
-                    </md-item>
-                </md-list>
-            </div>
-        </div>
+        <floating-panel data-title="Inbox" flex="25">
+            <md-list class="{{cssPrefix}}-panel-flex">
+                <md-item ng-repeat="item in messages">
+                    <md-item-content class="inbox">
+                        <md-button ng-click="showSimpleToast()">
+                            <i class="inbox-icon mdi" ng-class="statusCheck(item.status)"></i>
+                            {{item.title}} | {{item.date}}
+                        </md-button>
+                    </md-item-content>
+                    <md-divider></md-divider>
+                </md-item>
+            </md-list>
+        </floating-panel>
 
 
         <!-- second panel -->
         <!-- ~~~~~~~~~~~~ -->
-        <div class="md-whiteframe-z1 {{cssPrefix}}-panel" flex="40">
-
-            <div class="{{cssPrefix}}-panel-header" layout="row">
-                <div class="{{cssPrefix}}-panel-title">Contact Us</div>
-                <div flex></div>
-                <div>
-                    <fkjs-notification></fkjs-notification>
-                </div>
-            </div>
-
-            <md-content class="md-padding simple-bg">
+        <floating-panel data-title="Contact Us" flex="40">
+            <div class="{{cssPrefix}}-panel-flex">
                 <form name="userForm">
                     <md-input-container>
                         <label>Name</label>
@@ -73,23 +53,14 @@
                     <span flex></span>
                     <md-button class="md-primary md-raised" ng-click="showSimpleToast()">Reset</md-button>
                 </div>
-            </md-content>
-        </div>
+            </div>
+        </floating-panel>
 
 
         <!-- third panel -->
         <!-- ~~~~~~~~~~~ -->
-        <div class="md-whiteframe-z1 {{cssPrefix}}-panel" flex>
-
-            <div class="{{cssPrefix}}-panel-header" layout="row">
-                <div class="{{cssPrefix}}-panel-title">Statistics</div>
-                <div flex></div>
-                <div>
-                    <fkjs-notification></fkjs-notification>
-                </div>
-            </div>
-
-            <div class="{{cssPrefix}}-panel-body tabs-wrapper">
+        <floating-panel data-title="Statistics" flex>
+            <div class="{{cssPrefix}}-panel-flex tabs-wrapper">
                 <md-tabs md-selected="data.selectedIndex">
                     <md-tab ng-repeat="tab in tabs" id="tab{{$index}}"> <!--  md-ink-ripple="#313b3d" -->
                         {{tab.title}}
@@ -130,8 +101,7 @@
                     </div>
                 </ng-switch>
             </div>
-        </div>
-
+        </floating-panel>
 
     </div>
 </md-content>

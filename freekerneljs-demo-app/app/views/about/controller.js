@@ -3,7 +3,7 @@
 /**
  * About page
  */
-angular.module('AboutView', [])
+angular.module('fkjs.views.about', [])
 
 .controller('AboutViewController', function($scope){
     $scope.pageTitle = 'About';
