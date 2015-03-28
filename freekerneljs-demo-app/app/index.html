@@ -13,6 +13,7 @@
         <link href="http://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic" rel="stylesheet">
         <link rel="stylesheet" href="assets/bower_components/angular-material/angular-material.min.css">
         <link rel="stylesheet" href="assets/bower_components/material-design-iconic-font/css/material-design-iconic-font.min.css">
+        <link rel="stylesheet" href="assets/bower_components/animate.css/animate.min.css">
         <link rel="stylesheet" type="text/css" href="../dist/app.css" media="screen">
         
         <!-- 3rd parties -->
@@ -31,10 +32,11 @@
         <script src="app.bootstrap.js"></script>
     </head>
     
-    <body layout="column" class="md-default-theme md-hue-1">
-        <section class="{{cssPrefix}}-page-wrapper" layout="row" flex>
-            <fkjs-navbar></fkjs-navbar>
-            <div class="page-animation" layout="column" flex ui-view></div>
-        </section>
+    <body layout="row" class="md-default-theme md-hue-1 {{cssPrefix}}-page-wrapper">
+        <fkjs-navbar></fkjs-navbar>
+        <div layout="column" flex>
+            <fkjs-header></fkjs-header>
+            <div class="page-animation animated zoomInDown" layout="column" flex ui-view></div>
+        </div>
     </body>
 </html>

@@ -6,8 +6,6 @@
 angular.module('fkjs.views.signup', [])
 
 .controller('SignupViewController', function($scope, $timeout, $q){
-    $scope.pageTitle = 'Sign Up';
-    
     $scope.survey = ['Social Network', 'Advertisement', 'Friend', 'Other'];
     
     // list of 'states' value/display objects

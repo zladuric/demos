@@ -6,8 +6,6 @@
 angular.module('fkjs.views.home', [])
 
 .controller('HomeViewController', function($scope){
-    $scope.pageTitle = 'Home';
-    
     $scope.tiles = [{
         count: 320,
         description: 'Visitors Today',

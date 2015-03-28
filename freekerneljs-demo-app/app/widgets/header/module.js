@@ -9,6 +9,12 @@ angular.module('fkjs.widgets.header', [])
     return {
         restrict: 'E',
         templateUrl: 'widgets/header/template.html',
-        replace: true
+        replace: true,
+        
+        link: function(scope, element, attrs){
+            scope.$on('$stateChangeSuccess', function(event, current){
+                scope.pageTitle = current.data.pageTitle;
+            });
+        }
     };
 });
