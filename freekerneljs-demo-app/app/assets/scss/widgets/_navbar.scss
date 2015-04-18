@@ -4,6 +4,7 @@
 
 .#{$app-css-prefix}-navbar {
     margin: 10px 0;
+    display: block;
     @include border-radius($border-radius);
     background-color: $color-background-900;
     position: relative !important; //push the content right when open, instead of floating above it
@@ -27,6 +28,7 @@
     text-align: left;
     margin-bottom: 1px;
     line-height: 32px;
+    display: block;
 }
 
 .#{$app-css-prefix}-navbar-body .md-button.md-default-theme {
