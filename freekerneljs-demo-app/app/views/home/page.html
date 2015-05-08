@@ -14,7 +14,7 @@
         <!-- first panel -->
         <!-- ~~~~~~~~~~~ -->
         <floating-panel data-title="Inbox" flex="25">
-            <md-list class="{{cssPrefix}}-panel-flex">
+            <md-list class="{{cssPrefix}}-panel-flex {{cssPrefix}}-inbox-portlet">
                 <md-item ng-repeat="item in messages">
                     <md-item-content class="inbox">
                         <md-button ng-click="showSimpleToast()">

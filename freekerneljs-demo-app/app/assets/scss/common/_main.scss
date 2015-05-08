@@ -29,8 +29,13 @@ md-autocomplete ul{
     z-index: 999;
 }
 
+.md-button{
+    min-width: initial;
+    min-height: initial;
+}
 
-// ~~~ fkjs styles
+
+// ~~~ fkjs styles 
 
 .#{$app-css-prefix}-page-wrapper {
     padding-left: 1px;

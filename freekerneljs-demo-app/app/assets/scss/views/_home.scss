@@ -1,5 +1,8 @@
 
 // inbox
+.#{$app-css-prefix}-inbox-portlet {
+    padding: 0;
+}
 .inbox{
     padding: 10px 0;
     color: $color-grey-400;

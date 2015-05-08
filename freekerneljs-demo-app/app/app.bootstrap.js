@@ -3,7 +3,7 @@
  */
 $script([
     //services 
-    'services/ajax.js',
+    'services/utils.js',
     
     //widgets
     'widgets/navbar/module.js',
@@ -34,7 +34,7 @@ $script.ready('appDependencies', function(){
         'ui.router',
         
         //app services
-        'fkjs.services.ajax',
+        'fkjs.services.utils',
 
         //app widgets
         'fkjs.widgets.navbar',

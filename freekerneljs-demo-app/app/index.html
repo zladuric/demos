@@ -33,10 +33,10 @@
     </head>
     
     <body layout="row" class="md-default-theme md-hue-1 {{cssPrefix}}-page-wrapper">
-        <fkjs-navbar></fkjs-navbar>
-        <div layout="column" flex>
-            <fkjs-header></fkjs-header>
-            <div class="page-animation animated zoomInDown" layout="column" flex ui-view></div>
-        </div>
+        <fkjs-navbar sidnav-id="{{sidnavId}}" app-title="{{appTitle}}" css-prefix="{{cssPrefix}}" layout="column"></fkjs-navbar>
+        <main layout="column" flex>
+            <fkjs-header sidnav-id="{{sidnavId}}"></fkjs-header>
+            <article class="page-animation animated zoomInDown" layout="column" flex ui-view></article>
+        </main>
     </body>
 </html>

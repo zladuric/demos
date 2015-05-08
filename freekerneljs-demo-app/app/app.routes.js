@@ -12,27 +12,18 @@ angular.module('FreeKernelJsDemoApp')
             .state('home', {
                 url: '/home',
                 templateUrl: 'views/home/page.html',
-                controller: 'HomeViewController',
-                data: {
-                    pageTitle: 'Home'
-                }
+                controller: 'HomeViewController'
             })
 
             .state('signup', {
                 url: '/signup',
                 templateUrl: 'views/signup/page.html',
-                controller: 'SignupViewController',
-                data: {
-                    pageTitle: 'Sign Up'
-                }
+                controller: 'SignupViewController'
             })
 
             .state('about', {
                 url: '/about',
                 templateUrl: 'views/about/page.html',
-                controller: 'AboutViewController',
-                data: {
-                    pageTitle: 'About'
-                }
+                controller: 'AboutViewController'
             });
 });

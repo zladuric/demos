@@ -1,19 +1,20 @@
 <md-sidenav class="md-sidenav-left md-whiteframe-z2 {{cssPrefix}}-navbar" 
-            md-component-id="{{sidnavId}}" 
-            md-is-open="true">
-    
-    <h1 class="md-toolbar-tools {{cssPrefix}}-navbar-header">
-        {{appTitle}}
-    </h1>
+            md-component-id="appSideNav" 
+            md-is-open="true" flex>
 
-    <div layout="column" layout-align="space-between start" class="{{cssPrefix}}-navbar-body" ng-controller="NavbarController">
+    <!-- [v0.9.0] Note: some kind of bug in $mdComponentRegistry prevent it from getting a variable md-component-id="{{sidnavId}}"-->
+    
+    <h1 class="md-toolbar-tools {{cssPrefix}}-navbar-header" ng-bind="appTitle"></h1>
+
+    <div layout="column" layout-align="space-between start" class="{{cssPrefix}}-navbar-body">
 
         <md-button ng-repeat="item in navbarItems"
-                   ng-class="{'active' : isActive([item.pageUrl])}"
-                   ng-href="#{{item.pageUrl}}">
+                       ng-class="{ 'active' : item.isActive }"
+                       href="#{{item.pageUrl}}"
+                       aria-label="menu item">
 
             <i class="{{cssPrefix}}-navbar-item-icon mdi {{item.icon}}"></i>
-            <span class="{{cssPrefix}}-navbar-item-text">{{item.text}}</span>
+            <span class="{{cssPrefix}}-navbar-item-text" ng-bind="item.text"></span>
         </md-button>
 
     </div>

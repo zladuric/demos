@@ -5,6 +5,7 @@
 .#{$app-css-prefix}-navbar {
     margin: 10px 0;
     display: block;
+    width: 304px;
     @include border-radius($border-radius);
     background-color: $color-background-900;
     position: relative !important; //push the content right when open, instead of floating above it
